@@ -1,4 +1,4 @@
-@WorldLeague.Api_HostAddress = http://localhost:5206
+@WorldLeague.Api_HostAddress = https://localhost:7231
 
 POST {{WorldLeague.Api_HostAddress}}/api/draws
 Accept: application/json
