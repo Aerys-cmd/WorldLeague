@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BFD65F08-B37C-4C40-A45E-69126130989A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{33C1DDD1-5A74-4135-82DA-BD5B11549DBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldLeague.Domain", "src\WorldLeague.Domain\WorldLeague.Domain.csproj", "{55D72BBD-E63E-4E91-B864-8CBCD89189D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldLeague.Application", "src\WorldLeague.Application\WorldLeague.Application.csproj", "{2B87AF2A-C355-46D2-A3C5-ED229E130107}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldLeague.Infrastructure", "src\WorldLeague.Infrastructure\WorldLeague.Infrastructure.csproj", "{02BFA707-F7F1-4E0E-98B0-657DBBA122C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EC494B94-1C52-473C-AD9A-82FD81EA3DED}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldLeague.Domain.Tests", "test\WorldLeague.Domain.Tests\WorldLeague.Domain.Tests.csproj", "{A38E68D3-13D1-436C-907E-03A57951DFF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55D72BBD-E63E-4E91-B864-8CBCD89189D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D72BBD-E63E-4E91-B864-8CBCD89189D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D72BBD-E63E-4E91-B864-8CBCD89189D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D72BBD-E63E-4E91-B864-8CBCD89189D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B87AF2A-C355-46D2-A3C5-ED229E130107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B87AF2A-C355-46D2-A3C5-ED229E130107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B87AF2A-C355-46D2-A3C5-ED229E130107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B87AF2A-C355-46D2-A3C5-ED229E130107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02BFA707-F7F1-4E0E-98B0-657DBBA122C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02BFA707-F7F1-4E0E-98B0-657DBBA122C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02BFA707-F7F1-4E0E-98B0-657DBBA122C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02BFA707-F7F1-4E0E-98B0-657DBBA122C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A38E68D3-13D1-436C-907E-03A57951DFF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A38E68D3-13D1-436C-907E-03A57951DFF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A38E68D3-13D1-436C-907E-03A57951DFF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A38E68D3-13D1-436C-907E-03A57951DFF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{55D72BBD-E63E-4E91-B864-8CBCD89189D3} = {BFD65F08-B37C-4C40-A45E-69126130989A}
+		{2B87AF2A-C355-46D2-A3C5-ED229E130107} = {BFD65F08-B37C-4C40-A45E-69126130989A}
+		{02BFA707-F7F1-4E0E-98B0-657DBBA122C0} = {BFD65F08-B37C-4C40-A45E-69126130989A}
+		{A38E68D3-13D1-436C-907E-03A57951DFF3} = {33C1DDD1-5A74-4135-82DA-BD5B11549DBD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32416D92-5873-47E2-AC6B-10A414020DBC}
+	EndGlobalSection
+EndGlobal
