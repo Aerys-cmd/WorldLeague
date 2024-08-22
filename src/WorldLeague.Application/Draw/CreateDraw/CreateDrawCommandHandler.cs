@@ -23,9 +23,7 @@ internal class CreateDrawCommandHandler : ICommandHandler<CreateDrawCommand, Cre
 
         var countries = await _countryRepository.GetAllAsync();
 
-
         var draw = new Domain.Entities.Draw(request.DrawerName, request.DrawerLastName);
-
 
         draw.CreateGroupsAndDistributeTeams(countries, request.NumberOfGroups);
 
@@ -38,11 +36,6 @@ internal class CreateDrawCommandHandler : ICommandHandler<CreateDrawCommand, Cre
             );
 
 
-
-
-
-
-
-        throw new NotImplementedException();
+        return response;
     }
 }
