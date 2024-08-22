@@ -34,4 +34,8 @@ public sealed class Group : Entity
     }
 
 
+    private Group()
+    {
+    }
+
 }

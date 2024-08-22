@@ -17,7 +17,6 @@ internal sealed class CountryRepository : ICountryRepository
     {
         return await _context.Countries
             .Include(c => c.Teams)
-            .ThenInclude(t => t.Country)
             .ToListAsync();
     }
 }
