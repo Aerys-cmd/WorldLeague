@@ -1,4 +1,5 @@
-﻿using WorldLeague.Domain.Abstractions;
+﻿using System;
+using WorldLeague.Domain.Abstractions;
 using WorldLeague.Domain.Exceptions;
 
 namespace WorldLeague.Domain.Entities;
@@ -48,22 +49,25 @@ public sealed class Draw : Entity
             .Select(groupName => new Group(groupName, this))
             .ToList();
 
-        int currentGroupIndex = 0;
+        var groupSize = shuffledTeams.Count / numberOfGroups;
 
-        List<Guid> selectedTeamIds = [];
-
-        for (int i = 0; i < shuffledTeams.Count; i++)
+        while (shuffledTeams.Count > 0)
         {
-            var currentGroup = groups[currentGroupIndex];
 
-            var team = shuffledTeams.First(team => !selectedTeamIds.Contains(team.Id) && !currentGroup.HasTeamFromCountry(team.Country));
+            foreach (var group in groups)
+            {
+                if (group.Teams.Count == groupSize)
+                    continue;
 
-            currentGroup.AddTeam(team);
+                var availableTeams = shuffledTeams.Where(t => !group.HasTeamFromCountry(t.Country)).ToList();
 
-            selectedTeamIds.Add(team.Id);
+                if (availableTeams.Count == 0) continue;
 
-            currentGroupIndex = (currentGroupIndex + 1) % numberOfGroups;
+                var selectedTeam = availableTeams.OrderBy(t => shuffledTeams.Count(st => st.Country == t.Country)).First();
 
+                group.AddTeam(selectedTeam);
+                shuffledTeams.Remove(selectedTeam);
+            }
         }
 
         _groups = groups;
