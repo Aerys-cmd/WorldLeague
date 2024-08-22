@@ -16,13 +16,17 @@ internal class CountryAndTeamSeeder : IHostedService
 
     public async Task StartAsync(CancellationToken cancellationToken)
     {
-        var countries = CreateCountries();
 
         using var scope = _serviceProvider.CreateScope();
 
         var context = scope.ServiceProvider.GetRequiredService<WorldLeagueDbContext>();
 
-        await context.Countries.AddRangeAsync(countries);
+        if (context.Countries.Any())
+        {
+            return;
+        }
+
+        await context.Countries.AddRangeAsync(CreateCountries());
 
         await context.SaveChangesAsync();
 

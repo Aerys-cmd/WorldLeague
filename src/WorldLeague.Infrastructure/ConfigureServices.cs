@@ -4,6 +4,7 @@ using WorldLeague.Application.Abstractions;
 using WorldLeague.Domain.Repositories;
 using WorldLeague.Infrastructure.Persistence;
 using WorldLeague.Infrastructure.Persistence.Repositories;
+using WorldLeague.Infrastructure.Seed;
 
 namespace WorldLeague.Infrastructure
 {
@@ -20,6 +21,8 @@ namespace WorldLeague.Infrastructure
             services.AddScoped<ICountryRepository, CountryRepository>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<WorldLeagueDbContext>());
+
+            services.AddHostedService<CountryAndTeamSeeder>();
 
             return services;
         }
